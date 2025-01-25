@@ -2,3 +2,6 @@ res://Scenes/bubble.tscn
 res://Scripts/bubble.gd
 res://Scenes/cursor.tscn
 res://Scripts/cursor.gd
+res://Scenes/spawner.tscn
+res://Scripts/spawner.gd
+res://Scripts/spawn_info.gd
