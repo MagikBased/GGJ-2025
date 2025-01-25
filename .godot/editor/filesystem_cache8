@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1737778046
+icon.svg::CompressedTexture2D::8878711130691766867::1737776635::1737776640::1::::<><>::
+::res://Scenes/::1737777941
+bubble.tscn::PackedScene::8044948648565999499::1737777941::0::1::::<><>::res://Scripts/bubble.gd<>uid://bcmd20ggp8sfa::::res://Sprites/bubble.svg
+::res://Scripts/::1737777941
+bubble.gd::GDScript::-1::1737777941::0::1::::<>Node2D<>::
+::res://Sprites/::1737778046
+bubble.svg::CompressedTexture2D::2551802594078170410::1737777604::1737777608::1::::<><>::
+cursor.svg::CompressedTexture2D::6169257173966494511::1737778044::1737778046::1::::<><>::
