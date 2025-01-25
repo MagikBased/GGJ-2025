@@ -9,3 +9,16 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+.godot/editor/filesystem_cache8
+.godot/editor/filesystem_cache8
+.godot/editor/filesystem_update4
+.godot/editor/project_metadata.cfg
+.godot/editor/script_editor_cache.cfg
+.godot/shader_cache/SkyShaderRD/4bc541bfde1c30032df77bb4c98974909ad0368d22557f44e6cf095b26c0490a/112a6c3b88165a0a50276d2b24858c86a5eb21f3.vulkan.cache
+.godot/uid_cache.bin
+.godot/shader_cache/SkyShaderRD/4bc541bfde1c30032df77bb4c98974909ad0368d22557f44e6cf095b26c0490a/f08f1256a1fe104a5e7ccc86059db7cdd4b404f3.vulkan.cache
+.godot/uid_cache.bin
+.godot/editor/script_editor_cache.cfg
+.godot/editor/project_metadata.cfg
+.godot/editor/filesystem_update4
+.godot/editor/filesystem_cache8
