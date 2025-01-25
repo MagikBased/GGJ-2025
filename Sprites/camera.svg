@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 100 100"
+   width="200"
+   height="200"
+   version="1.1"
+   id="svg44"
+   sodipodi:docname="camera.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs48" />
+  <sodipodi:namedview
+     id="namedview46"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.7294322"
+     inkscape:cx="91.960519"
+     inkscape:cy="94.891532"
+     inkscape:window-width="1920"
+     inkscape:window-height="998"
+     inkscape:window-x="1080"
+     inkscape:window-y="1080"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg44" />
+  <!-- Camera body -->
+  <rect
+     x="15"
+     y="30"
+     width="70"
+     height="50"
+     rx="10"
+     ry="10"
+     fill="#CCCCCC"
+     stroke="black"
+     stroke-width="4"
+     id="rect36" />
+  <!-- Lens -->
+  <circle
+     cx="50"
+     cy="55"
+     r="15"
+     fill="white"
+     stroke="black"
+     stroke-width="4"
+     id="circle38" />
+  <!-- Lens inner detail -->
+  <circle
+     cx="50"
+     cy="55"
+     r="7"
+     fill="black"
+     id="circle40" />
+  <!-- Flash -->
+  <rect
+     x="25"
+     y="20"
+     width="15"
+     height="10"
+     rx="2"
+     ry="2"
+     fill="#CCCCCC"
+     stroke="black"
+     stroke-width="2"
+     id="rect42" />
+</svg>

@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmvbem7yqwxpb"]
+[gd_scene load_steps=4 format=3 uid="uid://dmvbem7yqwxpb"]
 
 [ext_resource type="Script" path="res://Scripts/bubble.gd" id="1_ae8lc"]
 [ext_resource type="Texture2D" uid="uid://bcmd20ggp8sfa" path="res://Sprites/bubble.svg" id="2_q5aur"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kcm0i"]
+radius = 86.1452
 
 [node name="Bubble" type="Node2D"]
 script = ExtResource("1_ae8lc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_q5aur")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_kcm0i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_exited"]

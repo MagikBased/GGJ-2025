@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1wusk1gydhf"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_0pbmk"]
+[ext_resource type="PackedScene" uid="uid://dmvbem7yqwxpb" path="res://Scenes/bubble.tscn" id="2_wry8r"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_0pbmk")
+bubble_scene = ExtResource("2_wry8r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Bubbles" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -5,3 +5,5 @@ res://Scripts/cursor.gd
 res://Scenes/spawner.tscn
 res://Scripts/spawner.gd
 res://Scripts/spawn_info.gd
+res://Scenes/game.tscn
+res://Scripts/game.gd
