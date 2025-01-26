@@ -10,10 +10,13 @@ signal bubble_popped
 @export var experience = 1
 @export var enemy_damage = 1
 
+@export var bubble_hover_sounds: Array[AudioStream] = []
+
 var shrink_scale: float = 0.8
 var hover_animation_duration: float = 0.2
 var amplitude: float = 30.0
 var frequency: float = 2.0
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var exp_gem_scene = preload("res://Scenes/exp_gem.tscn")
 var exp_spawn_chance: float = 1
@@ -86,6 +89,11 @@ func pop() -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	is_hovering = true
+	if !audio_stream_player_2d.playing:
+		if bubble_hover_sounds.size() > 0:
+			var random_sound = bubble_hover_sounds[randi() % bubble_hover_sounds.size()]
+			audio_stream_player_2d.stream = random_sound
+			audio_stream_player_2d.play()
 
 func _on_area_2d_mouse_exited() -> void:
 	is_hovering = false

@@ -23,7 +23,7 @@ var shake_duration: float = 0.2
 var shake_frequency: float = 50.0
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	$ClickArea.connect("area_entered", Callable(self, "_on_area_entered"))
 	$ClickArea.connect("area_exited", Callable(self, "_on_area_exited"))
 	set_exp_bar(experience,calculate_experience_cap())
@@ -81,8 +81,19 @@ func set_exp_bar(set_value = 1, set_max_value = 100):
 	exp_bar.max_value = set_max_value
 
 func levelup():
+	GameRef.get_node("%LevelUpSound").play()
 	var level_label = GameRef.ui_manager.get_node("%LevelLabel")
 	level_label.text = str("Level: ",experience_level)
+	var level_up_panel = GameRef.get_node("%LevelUpPanel")
+	var upgrade_options = GameRef.get_node("%UpgradeOptions")
+	var offscreen_position = Vector2(1600, get_viewport().size.y / 2 - 400)
+	level_up_panel.position = offscreen_position
+	var target_position = Vector2(get_viewport().size.x / 2 - 400, get_viewport().size.y / 2 - 400)
+	level_up_panel.visible = true
+	var tween = level_up_panel.create_tween()
+	tween.tween_property(level_up_panel, "position", target_position, 0.2)
+	tween.tween_property(level_up_panel, "modulate:a", 1.0, 0.5)
+	get_tree().paused = true
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("left_click"):

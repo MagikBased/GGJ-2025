@@ -4,6 +4,7 @@ extends Node2D
 @onready var spawner: Node2D = $Managers/Spawner
 @onready var experience_bar: ProgressBar = %ExperienceBar
 @onready var player: Player = $Cursor
+
 @onready var camera: Camera2D = $Camera2D
 @onready var ui_manager: Control = $Managers/CanvasLayer/UIManager
 

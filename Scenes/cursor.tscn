@@ -22,6 +22,7 @@ script = ExtResource("1_b3gww")
 bubble_pop_sounds = Array[AudioStream]([ExtResource("3_tfkcj"), ExtResource("3_k01xk"), ExtResource("4_0ajl6")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(58, 88)
 texture = ExtResource("2_6r43a")
 
