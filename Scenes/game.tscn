@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1wusk1gydhf"]
+[gd_scene load_steps=15 format=3 uid="uid://d1wusk1gydhf"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_0pbmk"]
 [ext_resource type="PackedScene" uid="uid://dmvbem7yqwxpb" path="res://Scenes/bubble.tscn" id="2_wry8r"]
@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://d21ho0f0x6pdi" path="res://new_theme.tres" id="5_tibx2"]
 [ext_resource type="AudioStream" uid="uid://5j0ucp2h6gjo" path="res://Sounds/BubblePops/rapid bubbles.mp3" id="8_6cew5"]
 [ext_resource type="Script" path="res://Scripts/experience_bar.gd" id="8_ckvxw"]
+[ext_resource type="Script" path="res://Scripts/level_up_panel.gd" id="8_xniga"]
 
 [sub_resource type="Resource" id="Resource_4p77a"]
 script = ExtResource("4_tg6iu")
@@ -88,13 +89,13 @@ horizontal_alignment = 1
 [node name="LevelUpPanel" type="Panel" parent="Managers/CanvasLayer/UIManager"]
 unique_name_in_owner = true
 process_mode = 2
-visible = false
 layout_mode = 0
 offset_left = 1600.0
 offset_top = 80.0
 offset_right = 2400.0
 offset_bottom = 880.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2e37p")
+script = ExtResource("8_xniga")
 
 [node name="Label" type="Label" parent="Managers/CanvasLayer/UIManager/LevelUpPanel"]
 layout_mode = 0

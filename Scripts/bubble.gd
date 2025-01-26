@@ -7,7 +7,7 @@ signal bubble_popped
 @export var speed: float = 100.0
 @export var damage: float = 1
 @export var knockback_recovery = 3.5
-@export var experience = 1
+@export var experience = 5
 @export var enemy_damage = 1
 
 @export var bubble_hover_sounds: Array[AudioStream] = []
@@ -58,6 +58,7 @@ func _notification(what: int) -> void:
 func try_spawn_exp_gem() -> void:
 	if randi() % 100 < exp_spawn_chance * 100:
 		var gem = exp_gem_scene.instantiate()
+		gem.experience = experience
 		gem.global_position = global_position
 		gem.camera = camera
 		get_parent().add_child(gem)

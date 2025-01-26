@@ -9,6 +9,8 @@ var overlapping_bubbles: Array[Node2D] = []
 @onready var bubble_pops: AudioStreamPlayer2D = $BubblePops
 @onready var damage_sound: AudioStreamPlayer2D = $DamageSound
 
+const ITEM_OPTION = preload("res://Scenes/item_option.tscn")
+
 var experience = 0
 var experience_level = 1
 var collected_experience = 0
@@ -86,10 +88,17 @@ func levelup():
 	level_label.text = str("Level: ",experience_level)
 	var level_up_panel = GameRef.get_node("%LevelUpPanel")
 	var upgrade_options = GameRef.get_node("%UpgradeOptions")
-	var offscreen_position = Vector2(1600, get_viewport().size.y / 2 - 400)
+	var offscreen_position = Vector2(1600, get_viewport().size.y / 2 - 360)
 	level_up_panel.position = offscreen_position
-	var target_position = Vector2(get_viewport().size.x / 2 - 400, get_viewport().size.y / 2 - 400)
+	var target_position = Vector2(get_viewport().size.x / 2 - 400, get_viewport().size.y / 2 - 360)
 	level_up_panel.visible = true
+	var options = 0
+	var optionsmax = 3
+	while options < optionsmax:
+		var option_choice = ITEM_OPTION.instantiate()
+		option_choice.item = level_up_panel.get_random_item()
+		GameRef.get_node("%UpgradeOptions").add_child(option_choice)
+		options += 1
 	var tween = level_up_panel.create_tween()
 	tween.tween_property(level_up_panel, "position", target_position, 0.2)
 	tween.tween_property(level_up_panel, "modulate:a", 1.0, 0.5)
@@ -142,3 +151,31 @@ func get_camera_rect() -> Rect2:
 		world_position - (zoom * viewport_size / 2),
 		zoom * viewport_size
 		)
+
+func upgrade_character(upgrade) -> void:
+	print("upgrade char")
+	match upgrade:
+		"PetCursor1":
+			pass
+		"PetCursor2":
+			pass
+		"PetCursor3":
+			pass
+		"PetCursor4":
+			pass
+		"PetCursor5":
+			pass
+		"PetCursor6":
+			pass
+		"PetCursor7":
+			pass
+		"PetCursor8":
+			pass
+	var option_children = GameRef.get_node("%UpgradeOptions").get_children()
+	for i in option_children:
+		i.queue_free()
+	GameRef.get_node("%LevelUpPanel").upgrade_options.clear()
+	GameRef.get_node("%LevelUpPanel").collected_upgrades.clear()
+	GameRef.get_node("%LevelUpPanel").visible = false
+	get_tree().paused = false
+	calculate_experience(0)

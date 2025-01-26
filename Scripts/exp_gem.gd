@@ -87,6 +87,8 @@ func collect():
 		return experience
 
 func get_camera_rect() -> Rect2:
+	if camera == null:
+		return Rect2()
 	var viewport_size = Vector2(get_viewport().size)
 	var camera_position = camera.global_position
 	var zoom = camera.zoom
