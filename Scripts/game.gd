@@ -1,30 +1,17 @@
+class_name Game
 extends Node2D
 
-@export var bubble_scene: PackedScene
-@export var spawn_interval: float = 1.0
-@export var bubble_speed: float = 100
+@onready var spawner: Node2D = $Managers/Spawner
+@onready var experience_bar: ProgressBar = %ExperienceBar
+@onready var player: Player = $Cursor
+@onready var camera: Camera2D = $Camera2D
+@onready var ui_manager: Control = $Managers/CanvasLayer/UIManager
 
 func _ready():
-	$Timer.wait_time = spawn_interval
-	$Timer.start()
-
-func _on_Timer_timeout():
-	spawn_bubble()
-
-func spawn_bubble():
-	var bubble = bubble_scene.instantiate()
+	pass
 	
-	var screen_size = get_viewport_rect().size
-	var x = randf_range(-50, screen_size.x + 50) 
-	var y = randf_range(-50, screen_size.y + 50)
-	bubble.position = Vector2(x, y)
-	
-	var center = screen_size / 2
-	bubble.direction = (center - bubble.position).normalized()
-	
-	bubble.speed = bubble_speed
-	
-	$Bubbles.add_child(bubble)
-
-func _on_timer_timeout() -> void:
-	spawn_bubble()
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and Input.is_action_just_pressed("restart"):
+		var current_scene = get_tree().current_scene
+		var scene_path = current_scene.scene_file_path
+		get_tree().change_scene_to_file(scene_path)

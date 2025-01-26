@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxiafqumn2lia"]
+
+[ext_resource type="Texture2D" uid="uid://dee2jqc5nwhcs" path="res://Sprites/exp gem.svg" id="1_8ghnv"]
+[ext_resource type="Script" path="res://Scripts/exp_gem.gd" id="1_idlba"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jtrmo"]
+radius = 38.0
+height = 154.0
+
+[node name="ExpGem" type="Area2D" groups=["loot"]]
+script = ExtResource("1_idlba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_jtrmo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8ghnv")

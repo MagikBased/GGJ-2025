@@ -1,19 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737824503
+::res://::1737849448
 icon.svg::CompressedTexture2D::8878711130691766867::1737824464::1737824504::1::::<><>::
-::res://Scenes/::1737824464
-bubble.tscn::PackedScene::8044948648565999499::1737824464::0::1::::<><>::res://Scripts/bubble.gd<>uid://bcmd20ggp8sfa::::res://Sprites/bubble.svg
-cursor.tscn::PackedScene::308556289115422146::1737824464::0::1::::<><>::res://Scripts/cursor.gd<>uid://ct5o08swjwwgl::::res://Sprites/cursor.svg
-game.tscn::PackedScene::265612804297244255::1737824464::0::1::::<><>::res://Scripts/game.gd<>uid://dmvbem7yqwxpb::::res://Scenes/bubble.tscn
-spawner.tscn::PackedScene::2572130459890941056::1737824464::0::1::::<><>::res://Scripts/spawner.gd
-::res://Scripts/::1737824464
-bubble.gd::GDScript::-1::1737824464::0::1::::<>Node2D<>::
-cursor.gd::GDScript::-1::1737824464::0::1::::<>Node2D<>::
-game.gd::GDScript::-1::1737824464::0::1::::<>Node2D<>::
-spawner.gd::GDScript::-1::1737824464::0::1::::<>Node<>::
-spawn_info.gd::GDScript::-1::1737824464::0::1::::SpawnInfo<>Resource<>::
-::res://Sprites/::1737824464
+::res://Scenes/::1737849582
+bubble.tscn::PackedScene::8044948648565999499::1737849064::0::1::::<><>::res://Scripts/bubble.gd<>uid://bcmd20ggp8sfa::::res://Sprites/bubble.svg
+cursor.tscn::PackedScene::308556289115422146::1737849119::0::1::::<><>::res://Scripts/cursor.gd<>uid://ct5o08swjwwgl::::res://Sprites/cursor.svg<>uid://bw80eoa2yvoe8::::res://Sounds/BubblePops/bubble-pop-2.mp3<>uid://v7sjrxfdrcpm::::res://Sounds/BubblePops/bubble-pop-1.mp3<>uid://2b7dqfm08kxs::::res://Sounds/BubblePops/bubble-pop-3.mp3
+exp_gem.tscn::PackedScene::8790130277589412964::1737849064::0::1::::<><>::uid://dee2jqc5nwhcs::::res://Sprites/exp gem.svg<>res://Scripts/exp_gem.gd
+game.tscn::PackedScene::265612804297244255::1737849582::0::1::::<><>::res://Scripts/game.gd<>uid://dmvbem7yqwxpb::::res://Scenes/bubble.tscn<>uid://bcv7u3qxsd4hg::::res://Scenes/spawner.tscn<>uid://enp422werjgk::::res://Scenes/cursor.tscn<>res://Scripts/spawn_info.gd<>res://Scripts/ui_manager.gd<>res://Scripts/experience_bar.gd
+spawner.tscn::PackedScene::2572130459890941056::1737849064::0::1::::<><>::res://Scripts/spawner.gd
+::res://Scripts/::1737849582
+bubble.gd::GDScript::-1::1737848443::0::1::::<>Node2D<>::
+cursor.gd::GDScript::-1::1737849574::0::1::::Player<>Node2D<>::
+experience_bar.gd::GDScript::-1::1737845386::0::1::::<>ProgressBar<>::
+exp_gem.gd::GDScript::-1::1737848897::0::1::::<>Node2D<>::
+game.gd::GDScript::-1::1737849582::0::1::::Game<>Node2D<>::
+spawner.gd::GDScript::-1::1737847983::0::1::::<>Node2D<>::
+spawn_info.gd::GDScript::-1::1737825488::0::1::::SpawnInfo<>Resource<>::
+ui_manager.gd::GDScript::-1::1737844081::0::1::::<>Control<>::
+::res://Sounds/::1737849703
+take damage.mp3::AudioStreamMP3::6036150600072832291::1737849703::1737849703::1::::<><>::
+::res://Sounds/BubblePops/::1737848956
+bubble-pop-1.mp3::AudioStreamMP3::1541135711202844458::1737848130::1737848131::1::::<><>::
+bubble-pop-2.mp3::AudioStreamMP3::4000225514195139561::1737848849::1737848852::1::::<><>::
+bubble-pop-3.mp3::AudioStreamMP3::1899112305808742944::1737848955::1737848956::1::::<><>::
+::res://Sprites/::1737843862
 bubble.svg::CompressedTexture2D::2551802594078170410::1737824464::1737824504::1::::<><>::
 camera.svg::CompressedTexture2D::4874899130433407116::1737824464::1737824504::1::::<><>::
 cursor.svg::CompressedTexture2D::6169257173966494511::1737824464::1737824504::1::::<><>::
 exp gem.svg::CompressedTexture2D::7449931212442029490::1737824464::1737824504::1::::<><>::
+exp_bar_fill.png::CompressedTexture2D::1788486922731267710::1737843851::1737843857::1::::<><>::
+health_bar_empty.png::CompressedTexture2D::2626557761234036716::1737843849::1737843862::1::::<><>::

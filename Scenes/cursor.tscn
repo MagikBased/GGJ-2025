@@ -1,10 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://enp422werjgk"]
+[gd_scene load_steps=10 format=3 uid="uid://enp422werjgk"]
 
 [ext_resource type="Script" path="res://Scripts/cursor.gd" id="1_b3gww"]
 [ext_resource type="Texture2D" uid="uid://ct5o08swjwwgl" path="res://Sprites/cursor.svg" id="2_6r43a"]
+[ext_resource type="AudioStream" uid="uid://bw80eoa2yvoe8" path="res://Sounds/BubblePops/bubble-pop-2.mp3" id="3_k01xk"]
+[ext_resource type="AudioStream" uid="uid://v7sjrxfdrcpm" path="res://Sounds/BubblePops/bubble-pop-1.mp3" id="3_tfkcj"]
+[ext_resource type="AudioStream" uid="uid://2b7dqfm08kxs" path="res://Sounds/BubblePops/bubble-pop-3.mp3" id="4_0ajl6"]
+[ext_resource type="AudioStream" uid="uid://cr87rvm0uoysp" path="res://Sounds/take damage.mp3" id="6_6o36l"]
 
-[node name="Cursor" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1lyi"]
+radius = 36.0139
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_73yju"]
+radius = 165.027
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pn7hs"]
+radius = 13.0
+
+[node name="Cursor" type="Node2D" groups=["player"]]
+z_index = 100
 script = ExtResource("1_b3gww")
+bubble_pop_sounds = Array[AudioStream]([ExtResource("3_tfkcj"), ExtResource("3_k01xk"), ExtResource("4_0ajl6")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(58, 88)
 texture = ExtResource("2_6r43a")
+
+[node name="ClickArea" type="Area2D" parent="."]
+position = Vector2(58, 88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(-49, -78)
+shape = SubResource("CircleShape2D_o1lyi")
+
+[node name="GrabArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+position = Vector2(39, 101)
+shape = SubResource("CircleShape2D_73yju")
+
+[node name="CollectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
+position = Vector2(8, 9)
+shape = SubResource("CircleShape2D_pn7hs")
+
+[node name="BubblePops" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tfkcj")
+volume_db = 8.0
+
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6o36l")
+
+[connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
+[connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
