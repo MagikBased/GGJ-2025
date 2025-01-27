@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg32483"
+   sodipodi:docname="tank_bubble.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32485"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.01"
+     inkscape:cx="188.30846"
+     inkscape:cy="100.99502"
+     inkscape:window-width="1920"
+     inkscape:window-height="998"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg32483" />
+  <!-- Define a filter for the drop shadow -->
+  <defs
+     id="defs32477">
+    <filter
+       id="dropshadow"
+       x="-0.09125"
+       y="-0.09125"
+       width="1.2075"
+       height="1.2075">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="4"
+         result="blur"
+         id="feGaussianBlur32466" />
+      <feOffset
+         in="blur"
+         dx="4"
+         dy="4"
+         result="offsetBlur"
+         id="feOffset32468" />
+      <feMerge
+         id="feMerge32474">
+        <feMergeNode
+           in="offsetBlur"
+           id="feMergeNode32470" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode32472" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Circle with light blue fill, black stroke, and drop shadow -->
+  <circle
+     cx="100"
+     cy="100"
+     r="80"
+     fill="lightblue"
+     stroke="black"
+     stroke-width="10"
+     filter="url(#dropshadow)"
+     id="circle32479"
+     style="fill:#d40000;fill-opacity:1" />
+  <!-- Highlight on the top right -->
+  <circle
+     cx="130"
+     cy="70"
+     r="20"
+     fill="white"
+     opacity="0.8"
+     id="circle32481" />
+</svg>

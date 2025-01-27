@@ -9,7 +9,7 @@ extends Node2D
 @onready var ui_manager: Control = $Managers/CanvasLayer/UIManager
 
 func _ready():
-	pass
+	get_tree().paused = true
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and Input.is_action_just_pressed("restart"):

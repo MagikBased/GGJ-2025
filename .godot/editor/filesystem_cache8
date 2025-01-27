@@ -1,47 +1,78 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737901608
-Fredoka-VariableFont_wdth,wght.ttf::FontFile::7630509310061730250::1737865296::1737865307::1::::<><>::
-icon.svg::CompressedTexture2D::8878711130691766867::1737776635::1737865307::1::::<><>::
-new_font_file.tres::FontFile::2597020519828489883::1737865296::0::1::::<><>::
-new_theme.tres::Theme::9108485992951398386::1737865296::0::1::::<><>::uid://dgyjmx1iwe3vq::::res://Fredoka-VariableFont_wdth,wght.ttf
-::res://Scenes/::1737901608
-bubble.tscn::PackedScene::8044948648565999499::1737901545::0::1::::<><>::res://Scripts/bubble.gd<>uid://bcmd20ggp8sfa::::res://Sprites/bubble.svg<>uid://ioq03khoquj7::::res://Sounds/BubblePops/bubble-hover-2.mp3<>uid://055xnc1tvsba::::res://Sounds/BubblePops/bubble-hover.mp3
-cursor.tscn::PackedScene::308556289115422146::1737901545::0::1::::<><>::res://Scripts/cursor.gd<>uid://ct5o08swjwwgl::::res://Sprites/cursor.svg<>uid://bw80eoa2yvoe8::::res://Sounds/BubblePops/bubble-pop-2.mp3<>uid://v7sjrxfdrcpm::::res://Sounds/BubblePops/bubble-pop-1.mp3<>uid://2b7dqfm08kxs::::res://Sounds/BubblePops/bubble-pop-3.mp3<>uid://cr87rvm0uoysp::::res://Sounds/take damage.mp3
-exp_gem.tscn::PackedScene::8790130277589412964::1737901545::0::1::::<><>::uid://dee2jqc5nwhcs::::res://Sprites/exp gem.svg<>res://Scripts/exp_gem.gd
-game.tscn::PackedScene::265612804297244255::1737901545::0::1::::<><>::res://Scripts/game.gd<>uid://dmvbem7yqwxpb::::res://Scenes/bubble.tscn<>uid://bcv7u3qxsd4hg::::res://Scenes/spawner.tscn<>uid://enp422werjgk::::res://Scenes/cursor.tscn<>res://Scripts/spawn_info.gd<>res://Scripts/ui_manager.gd<>uid://d21ho0f0x6pdi::::res://new_theme.tres<>uid://5j0ucp2h6gjo::::res://Sounds/BubblePops/rapid bubbles.mp3<>res://Scripts/experience_bar.gd<>res://Scripts/level_up_panel.gd
-item_option.tscn::PackedScene::7130530091958132193::1737901608::0::1::::<><>::uid://d21ho0f0x6pdi::::res://new_theme.tres<>res://Scripts/item_option.gd<>uid://dwhl0d7yjkapm::::res://Sprites/Icons/pet_cursor.svg
-main.tscn::PackedScene::1929555463871079758::1737901545::0::1::::<><>::
-spawner.tscn::PackedScene::2572130459890941056::1737901545::0::1::::<><>::res://Scripts/spawner.gd
-upgrade_db.tscn::PackedScene::8483377322626071283::1737901545::0::1::::<><>::res://Scripts/upgrade_db.gd
-::res://Scripts/::1737901504
-bubble.gd::GDScript::-1::1737901504::0::1::::<>Node2D<>::
-cursor.gd::GDScript::-1::1737901115::0::1::::Player<>Node2D<>::
-experience_bar.gd::GDScript::-1::1737865296::0::1::::<>ProgressBar<>::
-exp_gem.gd::GDScript::-1::1737901201::0::1::::<>Node2D<>::
-game.gd::GDScript::-1::1737865296::0::1::::Game<>Node2D<>::
-item_option.gd::GDScript::-1::1737901387::0::1::::<>Control<>::
-level_up_panel.gd::GDScript::-1::1737898875::0::1::::LevelUpPanel<>Panel<>::
-spawner.gd::GDScript::-1::1737865296::0::1::::<>Node2D<>::
-spawn_info.gd::GDScript::-1::1737865296::0::1::::SpawnInfo<>Resource<>::
-ui_manager.gd::GDScript::-1::1737865296::0::1::::<>Control<>::
-upgrade_db.gd::GDScript::-1::1737901437::0::1::::<>Node<>::
-::res://Sounds/::1737865307
-take damage.mp3::AudioStreamMP3::6036150600072832291::1737865296::1737865307::1::::<><>::
-::res://Sounds/BubblePops/::1737865307
-bubble-hover-2.mp3::AudioStreamMP3::591429640832238946::1737865296::1737865307::1::::<><>::
-bubble-hover.mp3::AudioStreamMP3::1818515693716127746::1737865296::1737865307::1::::<><>::
-bubble-pop-1.mp3::AudioStreamMP3::1541135711202844458::1737865296::1737865307::1::::<><>::
-bubble-pop-2.mp3::AudioStreamMP3::4000225514195139561::1737865296::1737865307::1::::<><>::
-bubble-pop-3.mp3::AudioStreamMP3::1899112305808742944::1737865296::1737865307::1::::<><>::
-rapid bubbles.mp3::AudioStreamMP3::2125798479080872032::1737865296::1737865307::1::::<><>::
-::res://Sprites/::1737901608
-bubble.svg::CompressedTexture2D::2551802594078170410::1737777604::1737865307::1::::<><>::
-camera.svg::CompressedTexture2D::4874899130433407116::1737781791::1737865307::1::::<><>::
-cursor.png::CompressedTexture2D::425324478048990245::1737865296::1737865307::1::::<><>::
-cursor.svg::CompressedTexture2D::6169257173966494511::1737778044::1737865307::1::::<><>::
-exp gem.svg::CompressedTexture2D::7449931212442029490::1737817024::1737865307::1::::<><>::
-exp_bar_fill.png::CompressedTexture2D::1788486922731267710::1737865296::1737865307::1::::<><>::
-guide_arrow.svg::CompressedTexture2D::7804999415115600896::1737865296::1737865307::1::::<><>::
-health_bar_empty.png::CompressedTexture2D::2626557761234036716::1737865296::1737865307::1::::<><>::
-::res://Sprites/Icons/::1737901608
-pet_cursor.svg::CompressedTexture2D::8718579995269150058::1737898047::1737901608::1::::<><>::
+::res://::1737990530
+export_presets.cfg::TextFile::-1::1737939899::0::1::::<><>::
+Fredoka-VariableFont_wdth,wght.ttf::FontFile::7630509310061730250::1725495080::1737856919::1::::<><>::
+icon.svg::CompressedTexture2D::8878711130691766867::1737824464::1737824504::1::::<><>::
+new_font_file.tres::FontFile::2597020519828489883::1737857319::0::1::::<><>::
+new_theme.tres::Theme::9108485992951398386::1737857319::0::1::::<><>::uid://dgyjmx1iwe3vq::::res://Fredoka-VariableFont_wdth,wght.ttf
+::res://Resources/::1737911534
+::res://Resources/Enemies/::1737939890
+basic_bubble.tres::Resource/EnemyData::2925060083285082182::1737939890::0::1::::<><>::res://Scripts/enemy_data.gd<>uid://bcmd20ggp8sfa::::res://Sprites/bubble.svg
+fast_bubble.tres::Resource/EnemyData::1066436127774055011::1737939890::0::1::::<><>::res://Scripts/enemy_data.gd<>uid://cbvs7r6ermdg5::::res://Sprites/fast_bubble.svg
+ink_bubble.tres::Resource/EnemyData::5291707084169393363::1737939890::0::1::::<><>::res://Scripts/enemy_data.gd<>uid://jel206s3fby4::::res://Sprites/ink_bubble.svg
+slime_bubble.tres::Resource/EnemyData::860542914230166976::1737939890::0::1::::<><>::res://Scripts/enemy_data.gd<>uid://bxcmx6auyiy55::::res://Sprites/slime_bubble.svg<>uid://f24epeahenp6::::res://Resources/Enemies/slime_bubble_split.tres
+slime_bubble_split.tres::Resource/EnemyData::408451147554619873::1737939890::0::1::::<><>::res://Scripts/enemy_data.gd<>uid://bxcmx6auyiy55::::res://Sprites/slime_bubble.svg
+tank_bubble.tres::Resource/EnemyData::5309344649601149311::1737939890::0::1::::<><>::res://Scripts/enemy_data.gd<>uid://droy87odi0t1k::::res://Sprites/tank_bubble.svg
+::res://Scenes/::1737939956
+bubble.tscn::PackedScene::8044948648565999499::1737935536::0::1::::<><>::res://Scripts/bubble.gd<>uid://bhw6ku6kiqoh7::::res://Resources/Enemies/basic_bubble.tres<>uid://bcmd20ggp8sfa::::res://Sprites/bubble.svg<>uid://ioq03khoquj7::::res://Sounds/BubblePops/bubble-hover-2.mp3<>uid://055xnc1tvsba::::res://Sounds/BubblePops/bubble-hover.mp3
+cursor.tscn::PackedScene::308556289115422146::1737939956::0::1::::<><>::res://Scripts/cursor.gd<>uid://ct5o08swjwwgl::::res://Sprites/cursor.svg<>uid://bw80eoa2yvoe8::::res://Sounds/BubblePops/bubble-pop-2.mp3<>uid://v7sjrxfdrcpm::::res://Sounds/BubblePops/bubble-pop-1.mp3<>uid://2b7dqfm08kxs::::res://Sounds/BubblePops/bubble-pop-3.mp3<>uid://crrty560ba0lv::::res://Sprites/immolate_gradient.svg<>uid://cr87rvm0uoysp::::res://Sounds/take damage.mp3
+exp_gem.tscn::PackedScene::8790130277589412964::1737935536::0::1::::<><>::uid://dee2jqc5nwhcs::::res://Sprites/exp gem.svg<>res://Scripts/exp_gem.gd
+game.tscn::PackedScene::265612804297244255::1737939956::0::1::::<><>::res://Scripts/game.gd<>uid://dmvbem7yqwxpb::::res://Scenes/bubble.tscn<>uid://bcv7u3qxsd4hg::::res://Scenes/spawner.tscn<>uid://enp422werjgk::::res://Scenes/cursor.tscn<>res://Scripts/spawn_info.gd<>uid://chv5epcalhn0r::::res://Resources/Enemies/tank_bubble.tres<>uid://pgubut1wywop::::res://Resources/Enemies/fast_bubble.tres<>uid://bhw6ku6kiqoh7::::res://Resources/Enemies/basic_bubble.tres<>uid://d21ho0f0x6pdi::::res://new_theme.tres<>uid://mi4astvs71n5::::res://Resources/Enemies/slime_bubble.tres<>uid://5j0ucp2h6gjo::::res://Sounds/BubblePops/rapid bubbles.mp3<>res://Scripts/experience_bar.gd<>res://Scripts/level_up_panel.gd<>res://Scripts/main_menu.gd<>uid://chnlv31yjogjj::::res://Resources/Enemies/ink_bubble.tres<>uid://fqkw34y7avxu::::res://Sprites/empty circle.svg<>uid://d11qjx4md56aq::::res://Sprites/coin.svg<>uid://f24epeahenp6::::res://Resources/Enemies/slime_bubble_split.tres
+ink_splat.tscn::PackedScene::726018962951901458::1737939956::0::1::::<><>::uid://ctolhnb0qnshj::::res://Sprites/splat.png<>res://Scripts/ink_splat.gd
+item_option.tscn::PackedScene::4813762006734875408::1737935536::0::1::::<><>::uid://d21ho0f0x6pdi::::res://new_theme.tres<>res://Scripts/item_option.gd<>uid://dwhl0d7yjkapm::::res://Sprites/Icons/pet_cursor.svg
+main.tscn::PackedScene::1929555463871079758::1737935536::0::1::::<><>::
+pet_cursor.tscn::PackedScene::1167516557719608974::1737935536::0::1::::<><>::res://Scripts/pet_cursor.gd<>uid://ct5o08swjwwgl::::res://Sprites/cursor.svg
+spawner.tscn::PackedScene::2572130459890941056::1737935536::0::1::::<><>::res://Scripts/spawner.gd<>res://Scripts/enemy_data.gd<>uid://bhw6ku6kiqoh7::::res://Resources/Enemies/basic_bubble.tres<>uid://mi4astvs71n5::::res://Resources/Enemies/slime_bubble.tres<>uid://f24epeahenp6::::res://Resources/Enemies/slime_bubble_split.tres
+toothpick.tscn::PackedScene::2172490470108368113::1737935536::0::1::::<><>::uid://frk2xjdkr7sl::::res://Sprites/Icons/toothpick.svg
+upgrade_db.tscn::PackedScene::7619043603925932851::1737935536::0::1::::<><>::res://Scripts/upgrade_db.gd
+::res://Scripts/::1737939890
+bubble.gd::GDScript::-1::1737924565::0::1::::<>Node2D<>::
+cursor.gd::GDScript::-1::1737939890::0::1::::Player<>Node2D<>::
+enemy_data.gd::GDScript::-1::1737916816::0::1::::EnemyData<>Resource<>::
+experience_bar.gd::GDScript::-1::1737845386::0::1::::<>ProgressBar<>::
+exp_gem.gd::GDScript::-1::1737908026::0::1::::<>Node2D<>::
+game.gd::GDScript::-1::1737931473::0::1::::Game<>Node2D<>::
+immolate.gd::GDScript::-1::1737922772::0::1::::<>RefCounted<>::
+ink_splat.gd::GDScript::-1::1737926171::0::1::::InkSplat<>Node2D<>::
+item_option.gd::GDScript::-1::1737908845::0::1::::<>Control<>::
+level_up_panel.gd::GDScript::-1::1737908026::0::1::::LevelUpPanel<>Panel<>::
+main_menu.gd::GDScript::-1::1737935789::0::1::::<>Panel<>::
+pet_cursor.gd::GDScript::-1::1737920087::0::1::::<>Node2D<>::
+spawner.gd::GDScript::-1::1737925908::0::1::::<>Node2D<>::
+spawn_info.gd::GDScript::-1::1737934043::0::1::::SpawnInfo<>Resource<>::
+ui_manager.gd::GDScript::-1::1737844081::0::1::::<>Control<>::
+upgrade_db.gd::GDScript::-1::1737924352::0::1::::<>Node<>::
+::res://Sounds/::1737849703
+take damage.mp3::AudioStreamMP3::6036150600072832291::1737849703::1737849703::1::::<><>::
+::res://Sounds/BubblePops/::1737859216
+bubble-hover-2.mp3::AudioStreamMP3::591429640832238946::1737855435::1737855449::1::::<><>::
+bubble-hover.mp3::AudioStreamMP3::1818515693716127746::1737855181::1737855183::1::::<><>::
+bubble-pop-1.mp3::AudioStreamMP3::1541135711202844458::1737848130::1737848131::1::::<><>::
+bubble-pop-2.mp3::AudioStreamMP3::4000225514195139561::1737848849::1737848852::1::::<><>::
+bubble-pop-3.mp3::AudioStreamMP3::1899112305808742944::1737848955::1737848956::1::::<><>::
+rapid bubbles.mp3::AudioStreamMP3::2125798479080872032::1737859212::1737859216::1::::<><>::
+::res://Sprites/::1737928764
+bubble.svg::CompressedTexture2D::2551802594078170410::1737824464::1737824504::1::::<><>::
+camera.svg::CompressedTexture2D::4874899130433407116::1737824464::1737824504::1::::<><>::
+coin.svg::CompressedTexture2D::9038834604689937260::1737928761::1737928764::1::::<><>::
+cursor.png::CompressedTexture2D::425324478048990245::1737858007::1737858008::1::::<><>::
+cursor.svg::CompressedTexture2D::6169257173966494511::1737824464::1737857964::1::::<><>::
+empty circle.svg::CompressedTexture2D::384622236235060790::1737927661::1737927706::1::::<><>::
+exp gem.svg::CompressedTexture2D::7449931212442029490::1737824464::1737824504::1::::<><>::
+exp_bar_fill.png::CompressedTexture2D::1788486922731267710::1737843851::1737843857::1::::<><>::
+fast_bubble.svg::CompressedTexture2D::4887533136125066918::1737924782::1737924788::1::::<><>::
+full circle.svg::CompressedTexture2D::1892720263614579187::1737927694::1737927706::1::::<><>::
+guide_arrow.svg::CompressedTexture2D::7804999415115600896::1737860321::1737860324::1::::<><>::
+health_bar_empty.png::CompressedTexture2D::2626557761234036716::1737843849::1737843862::1::::<><>::
+immolate_gradient.svg::CompressedTexture2D::6002344237694741599::1737909814::1737909819::1::::<><>::
+ink_bubble.svg::CompressedTexture2D::640674568942537913::1737912076::1737912095::1::::<><>::
+slime_bubble.svg::CompressedTexture2D::4005664149213953850::1737912088::1737912095::1::::<><>::
+splat.png::CompressedTexture2D::6136011758049574919::1737912001::1737912001::1::::<><>::
+tank_bubble.svg::CompressedTexture2D::8382891523030416114::1737926818::1737926827::1::::<><>::
+::res://Sprites/Icons/::1737921889
+fire.svg::CompressedTexture2D::1756866317175536301::1737909120::1737909145::1::::<><>::
+heart.svg::CompressedTexture2D::6288798081286914055::1737908741::1737908918::1::::<><>::
+pet_cursor.svg::CompressedTexture2D::8718579995269150058::1737908026::1737908031::1::::<><>::
+toothpick.svg::CompressedTexture2D::386695248462943415::1737910220::1737910224::1::::<><>::
+uparrow.svg::CompressedTexture2D::446101798912163197::1737910656::1737910666::1::::<><>::
+uparrowblue.svg::CompressedTexture2D::4625024776768331363::1737921887::1737921889::1::::<><>::

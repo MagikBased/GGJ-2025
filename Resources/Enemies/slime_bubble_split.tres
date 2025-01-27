@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://f24epeahenp6"]
+
+[ext_resource type="Script" path="res://Scripts/enemy_data.gd" id="1_quxgh"]
+[ext_resource type="Texture2D" uid="uid://bxcmx6auyiy55" path="res://Sprites/slime_bubble.svg" id="2_c6tlm"]
+
+[resource]
+script = ExtResource("1_quxgh")
+sprite = ExtResource("2_c6tlm")
+hp = 2.0
+speed = 150.0
+scale = 0.5
+damage = 3.0
+knockback_recovery = 3.5
+experience = 5
+exp_spawn_chance = 0.5
+amplitude = 30.0
+frequency = 2.0
+split = false
+splat = false

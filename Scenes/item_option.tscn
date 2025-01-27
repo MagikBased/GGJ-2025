@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8uc125hl7ma8"]
+[gd_scene load_steps=4 format=3 uid="uid://cat27siay2nd5"]
 
 [ext_resource type="Theme" uid="uid://d21ho0f0x6pdi" path="res://new_theme.tres" id="1_juxg6"]
 [ext_resource type="Script" path="res://Scripts/item_option.gd" id="2_8rygc"]
@@ -47,10 +47,11 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 94.0
 offset_top = 11.0
-offset_right = 223.0
-offset_bottom = 70.0
-theme_override_font_sizes/font_size = 48
+offset_right = 342.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 32
 text = "Name"
+vertical_alignment = 1
 
 [node name="LabelDescription" type="Label" parent="."]
 layout_mode = 0
@@ -74,7 +75,8 @@ offset_top = 11.0
 offset_right = -9.0
 offset_bottom = 70.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 32
 text = "Level: 1"
+horizontal_alignment = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

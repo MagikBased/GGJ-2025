@@ -13,8 +13,7 @@ signal selected_upgrade(upgrade)
 func _ready() -> void:
 	connect("selected_upgrade",Callable(player,"upgrade_character"))
 	if item == null:
-		pass
-		#item="food"
+		item="health"
 	label_name.text = UpgradeDb.UPGRADES[item]["displayname"]
 	label_description.text = UpgradeDb.UPGRADES[item]["details"]
 	label_level.text = UpgradeDb.UPGRADES[item]["level"]

@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcv7u3qxsd4hg"]
+[gd_scene load_steps=6 format=3 uid="uid://bcv7u3qxsd4hg"]
 
 [ext_resource type="Script" path="res://Scripts/spawner.gd" id="1_tnljn"]
+[ext_resource type="Script" path="res://Scripts/enemy_data.gd" id="2_wirfy"]
+[ext_resource type="Resource" uid="uid://bhw6ku6kiqoh7" path="res://Resources/Enemies/basic_bubble.tres" id="3_84sa4"]
+[ext_resource type="Resource" uid="uid://mi4astvs71n5" path="res://Resources/Enemies/slime_bubble.tres" id="4_43fc1"]
+[ext_resource type="Resource" uid="uid://f24epeahenp6" path="res://Resources/Enemies/slime_bubble_split.tres" id="5_pipjv"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_tnljn")
+enemies = Array[ExtResource("2_wirfy")]([ExtResource("3_84sa4"), ExtResource("4_43fc1"), ExtResource("5_pipjv")])
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

@@ -1,25 +1,203 @@
-[gd_scene load_steps=15 format=3 uid="uid://d1wusk1gydhf"]
+[gd_scene load_steps=42 format=3 uid="uid://d1wusk1gydhf"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_0pbmk"]
 [ext_resource type="PackedScene" uid="uid://dmvbem7yqwxpb" path="res://Scenes/bubble.tscn" id="2_wry8r"]
 [ext_resource type="PackedScene" uid="uid://bcv7u3qxsd4hg" path="res://Scenes/spawner.tscn" id="3_w245e"]
 [ext_resource type="PackedScene" uid="uid://enp422werjgk" path="res://Scenes/cursor.tscn" id="4_d4ptq"]
 [ext_resource type="Script" path="res://Scripts/spawn_info.gd" id="4_tg6iu"]
-[ext_resource type="Script" path="res://Scripts/ui_manager.gd" id="5_kevei"]
+[ext_resource type="Resource" uid="uid://chv5epcalhn0r" path="res://Resources/Enemies/tank_bubble.tres" id="5_keebj"]
+[ext_resource type="Resource" uid="uid://pgubut1wywop" path="res://Resources/Enemies/fast_bubble.tres" id="5_mmsrr"]
+[ext_resource type="Resource" uid="uid://bhw6ku6kiqoh7" path="res://Resources/Enemies/basic_bubble.tres" id="5_p6yfb"]
 [ext_resource type="Theme" uid="uid://d21ho0f0x6pdi" path="res://new_theme.tres" id="5_tibx2"]
+[ext_resource type="Resource" uid="uid://mi4astvs71n5" path="res://Resources/Enemies/slime_bubble.tres" id="7_x28ly"]
 [ext_resource type="AudioStream" uid="uid://5j0ucp2h6gjo" path="res://Sounds/BubblePops/rapid bubbles.mp3" id="8_6cew5"]
 [ext_resource type="Script" path="res://Scripts/experience_bar.gd" id="8_ckvxw"]
 [ext_resource type="Script" path="res://Scripts/level_up_panel.gd" id="8_xniga"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="9_4sgut"]
+[ext_resource type="Resource" uid="uid://chnlv31yjogjj" path="res://Resources/Enemies/ink_bubble.tres" id="9_ayfdl"]
+[ext_resource type="Texture2D" uid="uid://fqkw34y7avxu" path="res://Sprites/empty circle.svg" id="9_sgpvq"]
+[ext_resource type="Texture2D" uid="uid://d11qjx4md56aq" path="res://Sprites/coin.svg" id="10_dvwhi"]
+[ext_resource type="Resource" uid="uid://f24epeahenp6" path="res://Resources/Enemies/slime_bubble_split.tres" id="10_w1v2e"]
 
 [sub_resource type="Resource" id="Resource_4p77a"]
 script = ExtResource("4_tg6iu")
 time_start = 0
-time_end = 60
+time_end = 10000000000000000
 enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_p6yfb")
 enemy_number = 1
 enemy_spawn_delay = 1
 
-[sub_resource type="Theme" id="Theme_hjc8i"]
+[sub_resource type="Resource" id="Resource_dlk6u"]
+script = ExtResource("4_tg6iu")
+time_start = 10
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_p6yfb")
+enemy_number = 5
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_fr86s"]
+script = ExtResource("4_tg6iu")
+time_start = 40
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_mmsrr")
+enemy_number = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_oiy1m"]
+script = ExtResource("4_tg6iu")
+time_start = 40
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_p6yfb")
+enemy_number = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_vwbps"]
+script = ExtResource("4_tg6iu")
+time_start = 60
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("7_x28ly")
+enemy_number = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_5ddo3"]
+script = ExtResource("4_tg6iu")
+time_start = 80
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_keebj")
+enemy_number = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_8ignj"]
+script = ExtResource("4_tg6iu")
+time_start = 80
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_p6yfb")
+enemy_number = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_5dqfb"]
+script = ExtResource("4_tg6iu")
+time_start = 110
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("9_ayfdl")
+enemy_number = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_063tx"]
+script = ExtResource("4_tg6iu")
+time_start = 110
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("10_w1v2e")
+enemy_number = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_pebil"]
+script = ExtResource("4_tg6iu")
+time_start = 130
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("9_ayfdl")
+enemy_number = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_rkvxy"]
+script = ExtResource("4_tg6iu")
+time_start = 130
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_p6yfb")
+enemy_number = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_606is"]
+script = ExtResource("4_tg6iu")
+time_start = 150
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("7_x28ly")
+enemy_number = 1
+enemy_spawn_delay = 3
+
+[sub_resource type="Resource" id="Resource_hh53l"]
+script = ExtResource("4_tg6iu")
+time_start = 130
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_mmsrr")
+enemy_number = 2
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_81nfo"]
+script = ExtResource("4_tg6iu")
+time_start = 150
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_keebj")
+enemy_number = 1
+enemy_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_05d4v"]
+script = ExtResource("4_tg6iu")
+time_start = 180
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("7_x28ly")
+enemy_number = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_qldkt"]
+script = ExtResource("4_tg6iu")
+time_start = 200
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_keebj")
+enemy_number = 1
+enemy_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_0g3wm"]
+script = ExtResource("4_tg6iu")
+time_start = 220
+time_end = 0
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_mmsrr")
+enemy_number = 1
+enemy_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_uvi2r"]
+script = ExtResource("4_tg6iu")
+time_start = 200
+time_end = 0
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("9_ayfdl")
+enemy_number = 1
+enemy_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_j08m4"]
+script = ExtResource("4_tg6iu")
+time_start = 240
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("9_ayfdl")
+enemy_number = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_k6l2q"]
+script = ExtResource("4_tg6iu")
+time_start = 300
+time_end = 10000000000000000
+enemy = ExtResource("2_wry8r")
+enemy_data = ExtResource("5_keebj")
+enemy_number = 5
+enemy_spawn_delay = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e37p"]
 bg_color = Color(0.765316, 0.484038, 0.755461, 1)
@@ -37,16 +215,362 @@ corner_radius_bottom_left = 64
 [sub_resource type="LabelSettings" id="LabelSettings_3w6jh"]
 font_size = 64
 
+[sub_resource type="Theme" id="Theme_hjc8i"]
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_0pbmk")
 
 [node name="Managers" type="Node" parent="."]
 
 [node name="Spawner" parent="Managers" node_paths=PackedStringArray("camera") instance=ExtResource("3_w245e")]
-spawns = Array[ExtResource("4_tg6iu")]([SubResource("Resource_4p77a")])
+spawns = Array[ExtResource("4_tg6iu")]([SubResource("Resource_4p77a"), SubResource("Resource_dlk6u"), SubResource("Resource_fr86s"), SubResource("Resource_oiy1m"), SubResource("Resource_vwbps"), SubResource("Resource_5ddo3"), SubResource("Resource_8ignj"), SubResource("Resource_5dqfb"), SubResource("Resource_063tx"), SubResource("Resource_pebil"), SubResource("Resource_rkvxy"), SubResource("Resource_606is"), SubResource("Resource_hh53l"), SubResource("Resource_81nfo"), SubResource("Resource_05d4v"), SubResource("Resource_qldkt"), SubResource("Resource_0g3wm"), SubResource("Resource_uvi2r"), SubResource("Resource_j08m4"), SubResource("Resource_k6l2q")])
 camera = NodePath("../../Camera2D")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Managers"]
+
+[node name="MainMenu" type="Panel" parent="Managers/CanvasLayer"]
+unique_name_in_owner = true
+process_mode = 2
+z_index = 1
+offset_left = 360.0
+offset_top = 200.0
+offset_right = 1220.0
+offset_bottom = 718.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2e37p")
+script = ExtResource("9_4sgut")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu"]
+layout_mode = 0
+offset_right = 862.0
+offset_bottom = 89.0
+text = "Menu"
+label_settings = SubResource("LabelSettings_3w6jh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="Managers/CanvasLayer/MainMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 146.0
+offset_right = 823.0
+offset_bottom = 638.0
+
+[node name="PlayButton" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox"]
+layout_mode = 2
+theme = ExtResource("5_tibx2")
+theme_override_font_sizes/font_size = 64
+text = "Play"
+
+[node name="Upgrades" type="Node" parent="Managers/CanvasLayer/MainMenu/VBox"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Managers/CanvasLayer/MainMenu/VBox"]
+layout_mode = 2
+
+[node name="MaxHealth" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Max Health +20"
+
+[node name="TextureRect" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/TextureRect"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/TextureRect2"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "150
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/TextureRect3"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "300
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Damage" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Damage +1"
+
+[node name="TextureRect4" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/TextureRect4"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/TextureRect5"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "150
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/TextureRect6"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "300
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Managers/CanvasLayer/MainMenu/VBox"]
+layout_mode = 2
+
+[node name="Experience" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Experience +3%"
+
+[node name="TextureRect" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/TextureRect"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/TextureRect2"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "150
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/TextureRect3"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "300
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Immolate Dmg" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Immolate +1"
+
+[node name="TextureRect4" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/TextureRect4"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/TextureRect5"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "150
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/TextureRect6"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "300
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Managers/CanvasLayer/MainMenu/VBox"]
+layout_mode = 2
+
+[node name="PetCursor" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Pet Cursors +1"
+
+[node name="TextureRect" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/TextureRect"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/TextureRect2"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "150
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/TextureRect3"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "300
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Armour" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Armor + 1"
+
+[node name="TextureRect4" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/TextureRect4"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/TextureRect5"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "150
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("9_sgpvq")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/TextureRect6"]
+layout_mode = 0
+offset_right = 49.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "300
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Managers/CanvasLayer/MainMenu/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("10_dvwhi")
+
+[node name="CoinLabel" type="Label" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "x 0"
+
+[node name="InfiniteHP" type="Button" parent="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Infinite Health!!"
 
 [node name="UIManager" type="Control" parent="Managers/CanvasLayer"]
 unique_name_in_owner = true
@@ -58,7 +582,35 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("5_tibx2")
-script = ExtResource("5_kevei")
+
+[node name="LevelUpPanel" type="Panel" parent="Managers/CanvasLayer/UIManager"]
+unique_name_in_owner = true
+process_mode = 2
+z_index = 1
+layout_mode = 0
+offset_left = 1600.0
+offset_top = 80.0
+offset_right = 2400.0
+offset_bottom = 880.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2e37p")
+script = ExtResource("8_xniga")
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/UIManager/LevelUpPanel"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 89.0
+text = "You've Gained a Level!"
+label_settings = SubResource("LabelSettings_3w6jh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeOptions" type="VBoxContainer" parent="Managers/CanvasLayer/UIManager/LevelUpPanel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 85.0
+offset_right = 775.0
+offset_bottom = 555.0
 
 [node name="ExperienceBar" type="ProgressBar" parent="Managers/CanvasLayer/UIManager" node_paths=PackedStringArray("player")]
 unique_name_in_owner = true
@@ -86,39 +638,59 @@ grow_horizontal = 0
 grow_vertical = 2
 horizontal_alignment = 1
 
-[node name="LevelUpPanel" type="Panel" parent="Managers/CanvasLayer/UIManager"]
-unique_name_in_owner = true
-process_mode = 2
-layout_mode = 0
-offset_left = 1600.0
-offset_top = 80.0
-offset_right = 2400.0
-offset_bottom = 880.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_2e37p")
-script = ExtResource("8_xniga")
-
-[node name="Label" type="Label" parent="Managers/CanvasLayer/UIManager/LevelUpPanel"]
-layout_mode = 0
-offset_right = 800.0
-offset_bottom = 89.0
-text = "You've Gained a Level!"
-label_settings = SubResource("LabelSettings_3w6jh")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="UpgradeOptions" type="VBoxContainer" parent="Managers/CanvasLayer/UIManager/LevelUpPanel"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 25.0
-offset_top = 85.0
-offset_right = 775.0
-offset_bottom = 555.0
-
 [node name="LevelUpSound" type="AudioStreamPlayer2D" parent="Managers/CanvasLayer/UIManager"]
 unique_name_in_owner = true
 process_mode = 2
 stream = ExtResource("8_6cew5")
 volume_db = 10.0
+
+[node name="HealthBar" type="ProgressBar" parent="Managers/CanvasLayer/UIManager"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -639.0
+offset_top = 64.0
+offset_bottom = 128.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="Managers/CanvasLayer/UIManager/HealthBar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -794.0
+offset_top = 3.0
+offset_right = -642.0
+offset_bottom = 62.0
+grow_horizontal = 0
+theme = ExtResource("5_tibx2")
+theme_override_font_sizes/font_size = 48
+text = "Health:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Coins" type="HBoxContainer" parent="Managers/CanvasLayer/UIManager"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -386.0
+offset_right = 153.0
+offset_bottom = -303.0
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Managers/CanvasLayer/UIManager/Coins"]
+layout_mode = 2
+texture = ExtResource("10_dvwhi")
+
+[node name="CoinLabel" type="Label" parent="Managers/CanvasLayer/UIManager/Coins"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "x 0"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -128,3 +700,12 @@ volume_db = 10.0
 z_index = 4096
 position = Vector2(781, 430)
 camera = NodePath("../Camera2D")
+
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/PlayButton" to="Managers/CanvasLayer/MainMenu" method="_on_play_button_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/MaxHealth" to="Managers/CanvasLayer/MainMenu" method="_on_max_health_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer/Damage" to="Managers/CanvasLayer/MainMenu" method="_on_damage_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/Experience" to="Managers/CanvasLayer/MainMenu" method="_on_experience_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer2/Immolate Dmg" to="Managers/CanvasLayer/MainMenu" method="_on_immolate_dmg_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/PetCursor" to="Managers/CanvasLayer/MainMenu" method="_on_pet_cursor_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer3/Armour" to="Managers/CanvasLayer/MainMenu" method="_on_armour_pressed"]
+[connection signal="pressed" from="Managers/CanvasLayer/MainMenu/VBox/HBoxContainer4/InfiniteHP" to="Managers/CanvasLayer/MainMenu" method="_on_button_pressed"]

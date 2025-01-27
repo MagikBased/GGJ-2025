@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=4 format=3 uid="uid://mi4astvs71n5"]
+
+[ext_resource type="Script" path="res://Scripts/enemy_data.gd" id="1_6v7nl"]
+[ext_resource type="Texture2D" uid="uid://bxcmx6auyiy55" path="res://Sprites/slime_bubble.svg" id="2_8w46c"]
+[ext_resource type="Resource" uid="uid://f24epeahenp6" path="res://Resources/Enemies/slime_bubble_split.tres" id="2_do6tv"]
+
+[resource]
+script = ExtResource("1_6v7nl")
+sprite = ExtResource("2_8w46c")
+hp = 10.0
+speed = 200.0
+scale = 1.0
+damage = 5.0
+knockback_recovery = 3.5
+experience = 5
+exp_spawn_chance = 0.5
+amplitude = 30.0
+frequency = 2.0
+split = true
+splat = false
+split_bubble = ExtResource("2_do6tv")

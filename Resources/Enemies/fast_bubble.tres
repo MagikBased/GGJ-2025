@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://pgubut1wywop"]
+
+[ext_resource type="Script" path="res://Scripts/enemy_data.gd" id="1_arevv"]
+[ext_resource type="Texture2D" uid="uid://cbvs7r6ermdg5" path="res://Sprites/fast_bubble.svg" id="2_selaa"]
+
+[resource]
+script = ExtResource("1_arevv")
+sprite = ExtResource("2_selaa")
+hp = 1.0
+speed = 450.0
+scale = 1.0
+damage = 5.0
+knockback_recovery = 3.5
+experience = 5
+exp_spawn_chance = 1.0
+amplitude = 30.0
+frequency = 2.0
+split = false
+splat = false

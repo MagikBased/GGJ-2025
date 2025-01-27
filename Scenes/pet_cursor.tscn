@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://qvs3efqygeeg"]
+
+[ext_resource type="Script" path="res://Scripts/pet_cursor.gd" id="1_rlys7"]
+[ext_resource type="Texture2D" uid="uid://ct5o08swjwwgl" path="res://Sprites/cursor.svg" id="2_a75al"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b12og"]
+radius = 13.0384
+
+[node name="PetCursor" type="Node2D" groups=["pet"]]
+script = ExtResource("1_rlys7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(12, 18)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_a75al")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_b12og")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

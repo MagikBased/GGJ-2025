@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://57muolp8uskf"]
+
+[ext_resource type="Texture2D" uid="uid://frk2xjdkr7sl" path="res://Sprites/Icons/toothpick.svg" id="1_wif4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olv0t"]
+size = Vector2(10, 178)
+
+[node name="Toothpick" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wif4l")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, -1)
+shape = SubResource("RectangleShape2D_olv0t")
+
+[node name="AttackTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="ChangeDireciton" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="ResetPosTimer" type="Timer" parent="."]
+unique_name_in_owner = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://enp422werjgk"]
+[gd_scene load_steps=12 format=3 uid="uid://enp422werjgk"]
 
 [ext_resource type="Script" path="res://Scripts/cursor.gd" id="1_b3gww"]
 [ext_resource type="Texture2D" uid="uid://ct5o08swjwwgl" path="res://Sprites/cursor.svg" id="2_6r43a"]
 [ext_resource type="AudioStream" uid="uid://bw80eoa2yvoe8" path="res://Sounds/BubblePops/bubble-pop-2.mp3" id="3_k01xk"]
 [ext_resource type="AudioStream" uid="uid://v7sjrxfdrcpm" path="res://Sounds/BubblePops/bubble-pop-1.mp3" id="3_tfkcj"]
 [ext_resource type="AudioStream" uid="uid://2b7dqfm08kxs" path="res://Sounds/BubblePops/bubble-pop-3.mp3" id="4_0ajl6"]
+[ext_resource type="Texture2D" uid="uid://crrty560ba0lv" path="res://Sprites/immolate_gradient.svg" id="5_qi8ir"]
 [ext_resource type="AudioStream" uid="uid://cr87rvm0uoysp" path="res://Sounds/take damage.mp3" id="6_6o36l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o1lyi"]
@@ -15,6 +16,9 @@ radius = 165.027
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pn7hs"]
 radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8570a"]
+radius = 67.2681
 
 [node name="Cursor" type="Node2D" groups=["player"]]
 z_index = 100
@@ -52,5 +56,21 @@ volume_db = 8.0
 [node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_6o36l")
 
+[node name="Immolate" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(39, 101)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("5_qi8ir")
+
+[node name="ImmolateArea" type="Area2D" parent="Immolate"]
+
+[node name="ImmolateCollisionShape2D" type="CollisionShape2D" parent="Immolate/ImmolateArea"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_8570a")
+
+[node name="ImmolateTimer" type="Timer" parent="Immolate"]
+
 [connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
 [connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
+[connection signal="area_entered" from="Immolate/ImmolateArea" to="." method="_on_immolate_area_area_entered"]
+[connection signal="area_exited" from="Immolate/ImmolateArea" to="." method="_on_immolate_area_area_exited"]

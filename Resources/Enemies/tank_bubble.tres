@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://chv5epcalhn0r"]
+
+[ext_resource type="Script" path="res://Scripts/enemy_data.gd" id="1_ansco"]
+[ext_resource type="Texture2D" uid="uid://droy87odi0t1k" path="res://Sprites/tank_bubble.svg" id="2_q8yrs"]
+
+[resource]
+script = ExtResource("1_ansco")
+sprite = ExtResource("2_q8yrs")
+hp = 50.0
+speed = 50.0
+scale = 1.0
+damage = 10.0
+knockback_recovery = 3.5
+experience = 5
+exp_spawn_chance = 1.0
+amplitude = 30.0
+frequency = 2.0
+split = false
+splat = false
